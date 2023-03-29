@@ -1,0 +1,17 @@
+Yamada model
+M(t) = (1+(t/b)^-a)^-p;
+data5={{0.05,0.03},{0.10,0.03},{0.37,0.0581405},{0.39,0.209115},{0.395,0.284468},{0.407406,0.515},{0.42,0.729992}};
+(**********************************************)
+Clear[a]
+Clear[b]
+Clear[p]
+
+model = (1+(t/b)^{-a})^{-p};
+fit= FindFit[data5,model,{a,b,p}, t];
+eval = Evaluate[model/.fit];
+modelf=Function[{t}, Evaluate[eval]];
+epilog = Epilog-> Map[Point, data5];
+
+plotRange= PlotRange-> {0,1};
+axesOrigin= AxesOrigin -> {0,0};
+Plot[modelf[t], {t, 0.05,0.5},Evaluate[epilog] , Evaluate[plotRange],Evaluate[axesOrigin] ]

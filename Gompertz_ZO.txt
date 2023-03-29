@@ -1,0 +1,38 @@
+data1={{1,248},{5,742},{10,1936},{15,2567},{20,3205},{25,3750},{30,4301},{35,4548},{40,4749},{45,4901},
+{50,5024},{55,5110}};
+M(t) = ω* Exp[-α*Exp[-β*t]]; (*  *)
+labelstyle =LabelStyle-> Directive[Green, Bold];
+plotLabel = PlotLabel -> 5110* Exp[-α*Exp[-β*t]];
+plotStyle = PlotStyle-> Red;
+plotMarkers = PlotMarkers -> {Automatic,Small};
+listPlot =ListPlot[ data1,
+Evaluate[plotStyle],
+Evaluate[plotMarkers]];
+plotRange = PlotRange -> {Automatic, {0,5110}};
+axesOrigin = AxesOrigin -> {0,0};
+alphaApp = {{α,0}, 0,10, Appearance -> "Open" };
+betaApp = {{β,0}, 0.01,10, Appearance -> "Open" };
+init = Initialization :> (f[t_]:= 5200*Exp[-α*Exp[-β*t]]);
+Manipulate[
+Dynamic@Show[Plot[f[t], {t, 1,55},(*  *)
+Evaluate[labelstyle], (* *)
+Evaluate[plotLabel]],
+Evaluate[listPlot],
+Evaluate[plotRange],
+Evaluate[axesOrigin]], 
+Evaluate[alphaApp],
+Evaluate[betaApp],
+Evaluate[init] (*   *)
+]
+Manipulate[Dynamic[Show[Plot[f[t], {t, 1, 55}, Evaluate[labelstyle], 
+     Evaluate[plotLabel]], Evaluate[listPlot], Evaluate[plotRange], 
+    Evaluate[axesOrigin]]], {{α, 0.}, 0, 10, Appearance -> "Open"}, 
+  {{β, 0.09}, 0.01, 10, Appearance -> "Open"}, 
+  Initialization :> (f[t$_] := 5200*Exp[(-α)*Exp[(-β)*t$]])]
+α = 3;
+β = 0.09;
+f[t_]:= 5200*Exp[-α*Exp[-β*t]];
+data1 = {{1,248},{5,742},{10,1936},{15,2567},{20,3205},{25,3750},{30,4301},{35,4548},{40,4749},{45,4901},
+{50,5024},{55,5110}};
+linechart = Plot[f[t], {t, 1,55}, PlotStyle->{Red}, PlotRange -> {0,5200}]; 
+Show[linechart, ListPlot[data1, Joined-> True, Mesh->Full, MeshStyle-> Directive[PointSize[Large], Thick]]] (* изчертаване на графиката Gompertz, приближена за наличните входни данни *)

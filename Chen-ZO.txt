@@ -1,0 +1,14 @@
+Clear[a]
+Clear[b]
+Clear[α]
+Clear[β]
+Clear[λ]
+dataChen = {{1,16},{2,24},{3,27},{4,33},{5,41},{6,46},{7,54},{8,58},{9,69},{10,75},{11,81},{12,86},{13,90},{14,93},{15,96},{16,98},{17,99},{18,100},{19,100}, {20,100}}
+{{1,16},{2,24},{3,27},{4,33},{5,41},{6,46},{7,54},{8,58},{9,69},{10,75},{11,81},{12,86},{13,90},{14,93},{15,96},{16,98},{17,99},{18,100},{19,100},{20,100}}
+model=n*(1-Exp[λ*(1-Exp[t^β])])^{α}; (* n - прогнозната стойност *)
+fit=FindFit[dataChen,model,{λ,α,β},t];
+modelf=Function[{t},Evaluate[model/.fit]]
+epilog = Epilog->Map[Point,dataChen];
+plotRange = PlotRange->{0,136};
+axesOrigin = AxesOrigin->{0,0};
+Plot[modelf[t],{t,1,22},Evaluate[epilog],Evaluate[plotRange],Evaluate[axesOrigin]]

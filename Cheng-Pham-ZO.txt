@@ -1,0 +1,25 @@
+Clear[β]
+Clear[b]
+Clear[a]
+Clear[α]
+Clear[dataChen]
+dataChen={{1,2},{2,3},{3,4},{4,5},{5,7},{6,9},{7,11},{8,12},{9,19},{10,21}}
+{{1,2},{2,3},{3,4},{4,5},{5,7},{6,9},{7,11},{8,12},{9,19},{10,21}}
+a =40 (**)
+ChenPhamModelmodel= a*(1-β/(β+Log[(a+Exp[b*t])/(a+1)]))^α
+fitfit = FindFit[dataChen, ChenPhamModelmodel ,{b,α,β}, t]
+Clear[β]
+Clear[b]
+Clear[a]
+Clear[α]
+β=1.002 (**)
+α=0.805 (**)
+b=0.380 (**)
+a=40 (**)
+H[t_]:=a*(1-β/(β+Log[(a+Exp[b*t])/(a+1)]))^α
+H1[t_]:=b/(1+a*Exp[-b*t])
+H2[t_]:=a
+g1=Plot[H[t],{t,0,50},PlotRange->{0,50},AspectRatio->0.6,PlotStyle->{Red}];
+g2=Plot[H1[t],{t,0, 50},PlotRange->{0,50},AspectRatio->0.6,PlotStyle->{Blue}];
+g3=Plot[H2[t],{t,0.1,50},PlotRange->{0,50},AspectRatio->0.6,PlotStyle->{Dashed}];
+Show[g1,g2,g3, ListPlot[data1, Joined -> True, Mesh -> Full, MeshStyle-> Directive[PointSize[Large], Thick, Gray]]]
