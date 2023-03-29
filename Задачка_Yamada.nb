@@ -1,0 +1,93 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3069,         85]
+NotebookOptionsPosition[      2734,         70]
+NotebookOutlinePosition[      3109,         86]
+CellTagsIndexPosition[      3066,         83]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  StyleBox[
+   RowBox[{
+   "\:041d\:0430\:043c\:0435\:0440\:0435\:0442\:0435", " ", 
+    "\:043f\:0440\:0438", " ", "\:043a\:0430\:043a\:0432\:0438", " ", 
+    "\:043c\:0430\:043a\:0441\:0438\:043c\:0430\:043b\:043d\:0438", " ", 
+    "\:0441\:0442\:043e\:0439\:043d\:043e\:0441\:0442\:0438", " ", 
+    "\:0441\:043e\:0444\:0442\:0443\:0435\:0440\:044a\:0442", " ", 
+    "\:0449\:0435", " ", "\:0438\:043c\:0430", " ", 
+    "\:043f\:043e\:043b\:043e\:0436\:0438\:0442\:0435\:043b\:043d\:0430", " ",
+     "\:043e\:0446\:0435\:043d\:043a\:0430", " ", "\:0437\:0430", " ", 
+    "\:0441\:043e\:0444\:0442\:0443\:0435\:0440\:043d\:0430", " ", 
+    RowBox[{
+    "\:043d\:0430\:0434\:0435\:0436\:0434\:043d\:043e\:0441\:0442", ".", " ", 
+     "\:041f\:0440\:0435\:043e\:0431\:0440\:0430\:0437\:0443\:0432\:0430\:0439\
+\:0442\:0435"}], " ", "\:0432", " ", "\:0440\:0435\:0430\:043b\:043d\:0438", 
+    " ", "\:0441\:0435\:0434\:043c\:0438\:0446\:0438", " ", "\:0438", " ", 
+    "\:0441\:043e\:0444\:0442\:0443\:0435\:0440\:043d\:0438", " ", 
+    RowBox[{"\:043f\:043e\:0432\:0440\:0435\:0434\:0438", "."}]}],
+   FontWeight->"Plain"], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"ZadachaYamada", " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"0.02", ",", "0.041"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.03", ",", "0.041"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.04", ",", "0.041"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"0.05", ",", "0.043"}], "}"}], ",", " ", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0.06", ",", "0.044"}], "}"}], 
+     RowBox[{"{", 
+      RowBox[{"0.09", ",", "0.045"}], "}"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.27", ",", "0.047894"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.30", ",", "0.20742"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.38", ",", "0.27894"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0.404", ",", "0.501"}], "}"}]}], "}"}]}]}], "Input",
+ CellChangeTimes->{{3.852546791104912*^9, 3.8525468057945347`*^9}, {
+  3.852546926107619*^9, 
+  3.852546997217662*^9}},ExpressionUUID->"46dafd5b-d083-4cc9-9a55-\
+0df08bda4df1"]
+},
+WindowSize->{1904, 997},
+WindowMargins->{{1920, Automatic}, {Automatic, 0}},
+Magnification:>1.9 Inherited,
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2172, 48, 207, "Input", "ExpressionUUID" -> \
+"46dafd5b-d083-4cc9-9a55-0df08bda4df1"]
+}
+]
+*)
+
